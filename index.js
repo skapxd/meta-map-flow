@@ -5,7 +5,7 @@ async function main() {
   const {access_token} = await getAuth()
   const validation = await getValidation({
     token: access_token, 
-    idValidation: "YOUR_ID_VALIDATION"
+    idValidation: "644d982022b492001bcb9ff8"
   })
 
   const data = JSON.stringify(validation, null, 2)
