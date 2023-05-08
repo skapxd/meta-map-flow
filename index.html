@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://web-button.mati.io/button.js"></script>
+    <title>Meta Map</title>
+</head>
+
+<body>
+    <mati-button id="metamap-button" data-testId="mati-button" clientId="636aa045e2fb0d001c6c6497"
+        flowId="636aa3c7a472c8001cdb0763" color="#0CCDE6" />
+
+    <script>
+        const button = document.querySelector('mati-button')
+
+        if (button == null) {
+            throw new Error('metamap-button not found')
+        }
+
+        button.addEventListener('mati:loaded', (props) => console.log("mati:loaded", { props }))
+
+        button.addEventListener('mati:userStartedSdk', (props) => console.log("mati:userStartedSdk", { props }))
+
+        button.addEventListener('mati:exitedSdk', (props) => console.log("mati:exitedSdk", { props }))
+
+        button.addEventListener('mati:userFinishedSdk', (props) => console.log("mati:userFinishedSdk", { props }))
+    </script>
+</body>
+
+</html>
